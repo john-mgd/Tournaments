@@ -1,0 +1,53 @@
+TournamentHub.sln
+│
+├── TournamentHub.Domain          // Сущности (User, Team, Match)
+│   ├── PlayerClass.cs
+│   ├── MatchClass.cs
+│   ├── TeamClass.cs
+│   ├── TournamentClass.cs
+│   ├── UserClass.cs
+│   └── TeamStatsClass.cs
+├── TournamentHub.Application     // Сервисы (MatchService), DTO, интерфейсы
+│   ├── DTOs
+│   │   ├── Matches.cs
+│   │   ├── Statistics.cs
+│   │   ├── Teams.cs
+│   │   ├── Tournaments.cs
+│   │   └── Users.cs
+│   ├── Interfaces
+│   │   ├── IUserService.cs
+│   │   ├── ITeamService.cs
+│   │   ├── IPlayerService.cs
+│   │   ├── ITournamentService.cs
+│   │   ├── IApplicationService.cs
+│   │   ├── IMatchService.cs
+│   │   ├── IEventService.cs
+│   │   └── IStatisticsService.cs
+│   └── Services
+│       ├── UserService.cs
+│       ├── TeamService.cs
+│       ├── PlayerService.cs
+│       ├── TournamentService.cs
+│       ├── ApplicationService.cs
+│       ├── MatchService.cs
+│       ├── EventService.cs
+│       └── StatisticsService.cs
+└── TournamentHub.API             // Контроллеры, Program.cs, настройки
+    └── Controllers
+        ├── MatchesController.cs
+        ├── TeamsController.cs
+        ├── UsersController.cs
+        ├── ApplicationsController.cs
+        ├── EventsController.cs
+        └── TournamentsController.cs
+
+1	Swagger открывается, все эндпоинты видны	✅
+2	Можно зарегистрироваться / залогиниться, получить токен	⏳
+3	Кнопка Authorize в Swagger работает	⏳
+4	Админ может назначить роль	⏳
+5	Представитель создаёт команду и игроков	⏳
+6	Организатор создаёт турнир, принимает заявку, генерирует расписание	⏳
+7	Судья фиксирует события и подтверждает протокол	⏳
+8	Счёт и статистика пересчитались	⏳
+9	Негативные сценарии возвращают 400/401/403/404	⏳
+10	Данные видны в app.db	⏳

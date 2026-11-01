@@ -1,0 +1,24 @@
+erDiagram
+    USER ||--o{ TEAM : "представляет (Representative)"
+    USER ||--o{ TOURNAMENT : "организует (Organizer)"
+    USER ||--o{ MATCH : "судит (Judge)"
+
+    TEAM ||--o{ PLAYER : "имеет в составе"
+    
+    TOURNAMENT ||--o{ TOURNAMENT_APPLICATION : "получает"
+    TEAM ||--o{ TOURNAMENT_APPLICATION : "подает"
+
+    TOURNAMENT ||--o{ MATCH : "включает"
+    TEAM ||--o{ MATCH : "играет дома (HomeTeam)"
+    TEAM ||--o{ MATCH : "играет в гостях (AwayTeam)"
+
+    MATCH ||--|| PROTOCOL : "имеет"
+    MATCH ||--o{ MATCH_EVENT : "содержит"
+    MATCH ||--o{ MATCH_LINEUP : "включает"
+
+    PLAYER ||--o{ MATCH_LINEUP : "участвует в"
+    PLAYER ||--o{ MATCH_EVENT : "основной участник"
+    PLAYER ||--o{ MATCH_EVENT : "связанный участник"
+
+    TEAM ||--|| TEAM_STATS : "имеет"
+    PLAYER ||--|| PLAYER_STATS : "имеет"
